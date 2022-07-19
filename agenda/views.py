@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from agenda.models import Agenda, Horario
 from agenda.serializers import AgendaSerializer
 
-class AgendasViewSet(viewsets.ModelViewSet):
+class AgendasViewSet(viewsets.ViewSet):
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['medico']

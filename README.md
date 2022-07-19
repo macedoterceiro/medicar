@@ -1,5 +1,8 @@
 # medicar
 
+## Descrição do projeto
+API para gerenciamento de uma clinica médica (apenas Backend)
+
 Especificações técnicas
   O projeto contêm as seguintes dependências:
     asgiref==3.5.2

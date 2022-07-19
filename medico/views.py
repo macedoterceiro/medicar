@@ -6,14 +6,14 @@ from django_filters.rest_framework import DjangoFilterBackend
 from medico.models import Medico, Especialidade
 from medico.serializers import MedicoSerializer, EspecialidadeSerializer
 
-class EspecialidadesViewSet(viewsets.ModelViewSet):
+class EspecialidadesViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Especialidade.objects.all()
     serializer_class = EspecialidadeSerializer
     permission_classes = [IsAuthenticated]
     filter_backends = [filters.SearchFilter]
     search_fields = ['nome']
 
-class MedicosViewSet(viewsets.ModelViewSet):
+class MedicosViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
     permission_classes = [IsAuthenticated]
