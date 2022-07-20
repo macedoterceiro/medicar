@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=v-^wv)(#_2h(*g76!bq(siea0(7nu4)8z^=83s64jlbok(48$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
