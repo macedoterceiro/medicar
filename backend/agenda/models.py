@@ -54,7 +54,6 @@ class Horario(models.Model):
 
         validate_horario_dia_atual()
         validate_horario_exists()
-        
 
     def __str__(self):
         return f"(Agenda {self.agenda.id}) Horario: {self.hora} - ({format_date(self.agenda.dia)} - Médico: {self.agenda.medico.nome})"
