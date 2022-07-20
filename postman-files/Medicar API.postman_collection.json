@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "53545385-9bbb-4f91-9ae5-091bccdad758",
+		"name": "Medicar API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18328481"
+	},
+	"item": [
+		{
+			"name": "Autenticar",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first_name\":\"Seu nome\",\n\t\"last_name\":\"Seu sobrenome\",\n\t\"username\":\"seu_usuario\",\n\t\"email\":\"exemplo@email.com\",\n\t\"password\":\"Sua senha\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/registrar/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								"registrar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"seu_usuario\",\n\t\"password\":\"Sua senha\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/login/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rotas Principais",
+			"item": [
+				{
+					"name": "Consultas",
+					"item": [
+						{
+							"name": "Consultas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlDev}}/consultas/",
+									"host": [
+										"{{urlDev}}"
+									],
+									"path": [
+										"consultas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Criar Consulta",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"agenda_id\": \"id\",\n  \"horario\": \"hh:mm\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlDev}}/consultas/",
+									"host": [
+										"{{urlDev}}"
+									],
+									"path": [
+										"consultas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancelar Consulta",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlDev}}/consultas/$consulta_id/",
+									"host": [
+										"{{urlDev}}"
+									],
+									"path": [
+										"consultas",
+										"$consulta_id",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Menu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Medicos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/medicos/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								"medicos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Especialidades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/especialidades/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								"especialidades",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlDev}}/agendas/",
+							"host": [
+								"{{urlDev}}"
+							],
+							"path": [
+								"agendas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
