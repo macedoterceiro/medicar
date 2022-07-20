@@ -14,9 +14,11 @@ dbus-python==1.2.18
 defer==1.0.6
 distro==1.7.0
 distro-info===1.1build1
+dj-database-url==0.5.0
 Django==4.0.6
 django-cors-headers==3.13.0
 django-filter==22.1
+django-heroku==0.3.1
 djangorestframework==3.13.1
 duplicity==0.8.21
 fasteners==0.14.1
@@ -41,10 +43,11 @@ more-itertools==8.10.0
 netifaces==0.11.0
 oauthlib==3.2.0
 olefile==0.46
-paramiko==2.10.1
+paramiko==2.9.3
 pexpect==4.8.0
 Pillow==9.0.1
-protobuf==3.15.0
+protobuf==3.12.4
+psycopg2==2.9.3
 ptyprocess==0.7.0
 pycairo==1.20.1
 pycups==2.0.1
