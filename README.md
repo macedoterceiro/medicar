@@ -45,7 +45,7 @@
   - usuario.
   
 ### Rotas (Endpoints)
-   As rotas e seus parâmetros estão de acordo com o especificado no [desafio](https://github.com/Intmed-Software/desafio/tree/master/backend) com as seguintes modificações:
+   As rotas e seus parâmetros estão de acordo com o especificado no [projeto](https://github.com/Intmed-Software/desafio/tree/master/backend) com as seguintes modificações:
 
    - Os campos no retorno das requisições estão organizados em ordem alfabética;
    - Foi adicionado o campo especialidade para cada médico;
@@ -54,4 +54,13 @@
    - Esse token de acesso é utilizado para registrar para qual usuário será marcada a consulta.
    > Parti do pressuposto que não ter autenticação era uma pegadinha, pois se assim fosse seria possivel para um usuário marcar consultas para outro usuário. Caso fosse para de fato não ter autenticação, bastaria comentar as linhas que exigem autenticação e reescrever a função que armazena a consulta para usar o id ou login ao invés do token (não poderia ser o nome pois ele pode ser duplicado).
 
+### Observações
+  Os seguintes problemas foram encontrados durante a realização da tarefa, o que ocasionaram não conformidades com as regras de negócio definidas no escopo do projeto:
+
+  - Dificuldade de trabalhar com arrays (não consegui declarar o campo horários na agenda como um array, sendo necessário criar um model de horários, o que acabou diminuindo a eficiencia do preenchimento da agenda)
+  - Dificuldades de trabalhar com filtros (Ao sobrescrever o queryfilter com um filtro customizado acabou inviabilizando os filtros padrões, o que impede algumas pesquisas (especialidade e crm por exemplo))
+  - Dificuldade em deploy na nuvem (mesmo sabendo que é opcional, tentei o caminho mais indicado nos tutoriais (heroku), mas o buildpack persiste em conflitos que inviabilizam o build)
+
+### Considerações Finais
+  Considerando que só usei metade do tempo disponibilizado para realização da tarefa, os requisitos mínimos foram atingidos, embora tenha plena consciencia do espaço para melhorias no projeto. Aguardo apontamentos e novas instruções para melhoria do mesmo.
 
